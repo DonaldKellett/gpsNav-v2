@@ -1,0 +1,8 @@
+/*
+	gpsNav.css - v2
+	Just a tiny style sheet with some default styling for the error message.  To override it, either apply inline styles to the <span> with id="error" or simply edit this document.
+	To use this stylesheet, either add a <link> in your HTML document or @import this stylesheet into your main stylesheet(s)
+	(c) Donald Leung.  All rights reserved. 
+*/
+
+#error {color: red; font-size: small; font-style: italic;}

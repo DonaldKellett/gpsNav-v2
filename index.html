@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+	gpsNav - Version 2
+	Demo HTML Page
+	This page is only used for demonstration purposes - you can delete it once you know how to use gpsNav
+	(c) Donald Leung.  All rights reserved.
+	MIT Licensed
+-->
+<html>
+	<head>
+		<title>gpsNav - v2</title>
+		<link rel="stylesheet" type="text/css" href="gpsNav.css" />
+	</head>
+	<body>
+		<h1>gpsNav - Version 2 by Donald Leung</h1>
+		<p>Welcome to the second version of my <code>gpsNav</code> app!</p>
+		<p>Since Version 1 (the original <code>gpsNav</code> app), there have been a few updates:</p>
+		<ol>
+			<li>Fixed glitches in Version 1 so the <code>init()</code> function can take any number (and any combination) of settings</li>
+			<li>The new version allows the user to set the default image and text (message) displayed whenever there is an error - this is done by passing the properties <code>image</code> and <code>text</code> directly inside the <code>error</code> object.</li>
+			<li>Added a new setting: <code>getPositionOnce</code> - setting this to <code>true</code> disables GPS tracking - the visitor's location is only used once</li>
+		</ol>
+		<p>For more info, please read the <code>README.md</code> file in this repository.</p>
+		<p style="font-size: smaller; font-style: italic;">P.S.  If you haven't checked out the HTML code of this demo page, be sure to throw this into a text editor - feel free to mess with the <code>gpsNav</code> initialization code (there will be instructions in the comments within the <code>&lt;script&gt;</code> tags)!</p>
+		<p><img src="placeholder.jpg" id="map" /></p>
+		<p><span id="error"></span></p>
+		<!-- gpsNav App (Minified version) -->
+		<script src="gpsNav.min.js"></script>
+		<script>
+		// Basic
+		// gpsNav.init();
+		// Advanced (uncomment to see it work and feel free to edit, add or delete properties :D)
+		gpsNav.init({
+			getPositionOnce: true,
+			zoom: 17,
+			width: 500,
+			height: 500,
+			error: {
+				image: "new-default.png",
+				text: "An error occurred.  That's all we know.",
+				permissionDenied: {
+					image: "permissionDenied.jpg",
+					text: "Sorry, you denied permission for this website to use your location."
+				},
+				positionUnavailable: {
+					image: "positionUnavailable.jpg",
+					text: "Sorry, your position is currently unavailable."
+				},
+				timeout: {
+					image: "timeout.gif",
+					text: "Sorry, your location timed out."
+				},
+				unknownError: {
+					image: "unknownError.png",
+					text: "Sorry, an unknown error occurred while trying to access your location."
+				}
+			}
+		});
+		</script>
+	</body>
+</html>
