@@ -94,7 +94,7 @@ For example:
 gpsNav.init({
 	error: {
 		image: "new-default.png", // If specified, this is the new default image that shows up whenever an error occurs.  This is a general property; i.e. it can be overriden by specific cases specified in 'permissionDenied', 'positionUnavailable', etc.
-		text: "Sorry, an error occurred.  That's all we know." // If specified, this is the default text that shows up whenever an error occurs.  This is again general.
+		text: "Sorry, an error occurred.  That's all we know.", // If specified, this is the default text that shows up whenever an error occurs.  This is again general.
 		permissionDenied: {
 			image: "permissionDenied.jpg",
 			text: "Sorry, you denied permission for this website to access your location."
